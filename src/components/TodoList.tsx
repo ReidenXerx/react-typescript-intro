@@ -16,6 +16,9 @@ export const TodoList: React.FC<TodoListProps> = ({
     return <p className="center">Пока дел нет!</p>
   }
 
+  console.log(Object.keys(Object.getPrototypeOf(Object.create(todos[0]))));
+  
+
   const removeHandler = (event: React.MouseEvent, id: number) => {
     event.preventDefault()
     onRemove(id)
